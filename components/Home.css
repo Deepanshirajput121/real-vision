@@ -1,0 +1,60 @@
+.logo {
+  text-shadow: 0px 0px 4px #660708, 0px 0px 20px #660708, 0px 0px 40px #ba1215,
+    0px 0px 80px #ba1215;
+  color: #ba1215;
+}
+.text-animation {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+  align-items: center;
+  text-align: center;
+}
+}
+
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust as needed */
+  justify-content: center;
+}
+
+.icons i {
+  margin: 5px; /* Adjust as needed */
+  /* Additional styling for icons */
+}
+
+@media (max-width: 600px) {
+
+  .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+  .icons {
+      flex-direction: column;
+  }
+
+  .icons i {
+      margin: 10px 0; /* Adjust as needed */
+  }
+}
+
