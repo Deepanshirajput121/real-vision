@@ -44,7 +44,7 @@ const Gallery = () => {
                                 height={500} // Set an appropriate height
                                 layout="responsive" // Ensures responsiveness
                                 objectFit="cover" // Ensures the image covers the area
-                                className="transform transition-transform duration-300 group-hover:scale-105"
+                                className="transform transition-transform duration-300 group-hover:scale-105 object-cover"
                             />
                         </div>
                     ))}

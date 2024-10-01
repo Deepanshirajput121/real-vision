@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+  weight: "400 700", // only if these weights are used
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -24,13 +24,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-geist-sans`}
       >
-        <Navbar/>
-        <div className="container mx-auto min-h-[50vh]">
-        {children}
-        </div>
-        <Footer/>
+        <Navbar />
+        <main className="mx-auto min-h-[50vh]">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

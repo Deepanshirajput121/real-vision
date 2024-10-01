@@ -30,7 +30,7 @@ const HomeSection = () => {
 
   // Background image styling
   const sectionStyle = {
-    backgroundImage: `url(${images[currentImageIndex]})`,
+    backgroundImage: `url(${images[currentImageIndex] || "/images/default.jpg"})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -75,7 +75,7 @@ const HomeSection = () => {
           </h1>
 
           <h3 className="text-sm sm:text-lg md:text-2xl  text-white animate-fadeIn">
-            We are here to help you with your event 
+            We are here to help you with your event
             management needs.
           </h3>
         </div>
@@ -84,6 +84,7 @@ const HomeSection = () => {
         <div className="flex flex-wrap justify-center space-x-4 mb-3.5 sm:mt-10">
           <a
             href="tel:+919716017903"
+            aria-label="Call Us"
             className="text-white hover:text-green-500 flex items-center space-x-2"
           >
             <FaPhoneAlt size={28} />

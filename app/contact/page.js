@@ -30,11 +30,11 @@ const ContactUs = () => {
                 <meta name="description" content={metadata.description} />
             </head>
             <section
-                className="flex flex-col min-h-screen sm:min-h-[60vh] bg-[#0a0908] py-10 px-5" // Adjusts container height for phones
+                className="flex flex-col min-h-screen bg-[#0a0908] py-10 px-5" // Removed sm:min-h to allow more flexibility
                 id="contact"
             >
                 {/* Title */}
-                <div className="max-w-6xl mx-auto flex-grow">
+                <div className="max-w-7xl mx-auto flex-grow">
                     <h2 className="text-3xl sm:text-5xl font-bold text-center text-white mt-20 mb-5">
                         Contact <span className="logo">Us</span>
                     </h2>
@@ -52,7 +52,7 @@ const ContactUs = () => {
                     </div>
 
                     {/* Branch Offices */}
-                    <div className="grid grid-cols-1 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {/* Branch 1 */}
                         <div className={`${cardClasses} mb-4 sm:p-8`}>
                             <h4 className="text-xl sm:text-3xl font-semibold text-white mb-2">
