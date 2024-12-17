@@ -123,7 +123,7 @@ const HomeSection = () => {
         {/* Button Section */}
         <div className="btn-group sm:mt-8">
           <a
-            href="/contact"
+            href="mailto:realvision.reg@gmail.com"
             className="px-6 py-2 bg-[#660708] hover:bg-[#8b0000] text-white font-bold rounded-lg text-lg md:text-xl transition-all"
           >
             Book Now
