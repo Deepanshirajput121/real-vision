@@ -16,7 +16,7 @@ const Footer = () => {
                             trusted name across India, offering high-quality sound systems,
                             DJ setups, and a variety of event services. Available 24/7, we
                             ensure that your event—whether day or night—runs seamlessly and
-                            professionally.
+                            professionally. <strong>Pan India Services available.</strong>
                         </p>
                         <p className="mt-2 text-gray-400">
                             Our service offerings include Stage Show Services, Product
@@ -27,7 +27,8 @@ const Footer = () => {
                             earned us the trust of clients nationwide, we aim to make your event
                             exceptional.
                         </p>
-                        
+
+
                     </div>
 
                     {/* Services Section */}
@@ -83,7 +84,7 @@ const Footer = () => {
                         <ul className="mt-4 space-y-3">
                             <li>
                                 <strong>Head Office:</strong> <br />
-                                H.No.-214, Gali No.-1, Sonar Wali Gali, Harbansh Nagar, 
+                                H.No.-214, Gali No.-1, Sonar Wali Gali, Harbansh Nagar,
                                 Reliance Petrol Pump, Meerut Road, Ghaziabad, India 201001.
                             </li>
                             <li>
@@ -92,8 +93,8 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a href="tel:+919716017903, +919312417903, +919582105432" className="hover:text-gray-300">
-                                +91-9582105432 , +91-9312417903, <br />
-                                +91-9716017903
+                                    +91-9582105432 , +91-9312417903, <br />
+                                    +91-9716017903
                                 </a>
                             </li>
                             <li>
