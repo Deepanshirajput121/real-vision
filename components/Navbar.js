@@ -17,11 +17,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const offset = window.scrollY;
-            if (offset > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(offset > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -30,18 +26,23 @@ const Navbar = () => {
         };
     }, []);
 
+    // Menu ko close karne ke liye function
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-10 p-4 transition duration-300 ${isScrolled
-                ? "bg-[#000000] bg-opacity-50 backdrop-blur-lg" // Blurred background on scroll
-                : "bg-transparent"
-                } text-white`}
+            className={`fixed top-0 left-0 w-full z-10 p-4 transition duration-300 ${
+                isScrolled
+                    ? "bg-[#000000] bg-opacity-50 backdrop-blur-lg" // Blurred background on scroll
+                    : "bg-transparent"
+            } text-white`}
         >
-            <div className=" mx-auto flex justify-between items-center">
+            <div className="mx-auto flex justify-between items-center">
                 {/* Logo */}
-                <div className=" text-2xl md:text-4xl font-bold">
+                <div className="text-2xl md:text-4xl font-bold">
                     Real<span className="logo">Vision</span>
-
                 </div>
 
                 {/* Menu Links */}
@@ -81,25 +82,25 @@ const Navbar = () => {
             {/* Mobile Menu (Visible when isOpen) */}
             {isOpen && (
                 <ul className="block md:hidden bg-[#660708] text-white text-center transition-all duration-500 ease-in-out">
-                    <li className="py-4 text-lg flex items-center justify-center space-x-2">
+                    <li className="py-4 text-lg flex items-center justify-center space-x-2" onClick={closeMenu}>
                         <FaHome size={24} />
                         <Link href="/" className="block hover:text-gray-500 transition duration-300 text-xl">
                             Home
                         </Link>
                     </li>
-                    <li className="py-4 text-lg flex items-center justify-center space-x-2">
+                    <li className="py-4 text-lg flex items-center justify-center space-x-2" onClick={closeMenu}>
                         <FaConciergeBell size={24} />
                         <Link href="/services" className="block hover:text-gray-500 transition duration-300 text-xl">
                             Services
                         </Link>
                     </li>
-                    <li className="py-4 text-lg flex items-center justify-center space-x-2">
+                    <li className="py-4 text-lg flex items-center justify-center space-x-2" onClick={closeMenu}>
                         <FaPhone size={24} />
                         <Link href="/contact" className="block hover:text-gray-500 transition duration-300 text-xl">
                             Contact
                         </Link>
                     </li>
-                    <li className="py-4 text-lg flex items-center justify-center space-x-2">
+                    <li className="py-4 text-lg flex items-center justify-center space-x-2" onClick={closeMenu}>
                         <FaImages size={24} />
                         <Link href="/gallery" className="block hover:text-gray-500 transition duration-300 text-xl">
                             Gallery
